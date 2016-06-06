@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?> 
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.paint.*?>
+
+<GridPane 
+    id="GridPane" 
+    prefHeight="600.0"
+    prefWidth="800.0"
+    xmlns:fx="http://javafx.com/fxml/1"
+    hgap="10"
+    vgap="10"
+    fx:controller="demoproject.Formular.AuftragController"
+>
+    <stylesheets>
+        <URL value="@css/form.css"/>
+    </stylesheets>
+    
+    <TextField fx:id="searchAuftrag"
+               GridPane.columnIndex="0" 
+               GridPane.rowIndex="1" 
+               text="Auftragsnummer"/>
+    <Button fx:id="searchButton" 
+            GridPane.columnIndex="1" 
+            GridPane.rowIndex="1"
+            text="Search" 
+            onAction="#handleSubmitButtonAction"/>
+    <ComboBox id="comboInterval" fx:id="comboTime" editable="false" layoutX="14.0" layoutY="22.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>         
+</GridPane>
