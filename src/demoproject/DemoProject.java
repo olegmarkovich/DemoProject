@@ -30,84 +30,81 @@ import javafx.stage.Stage;
  * @author Lenovo
  */
 public class DemoProject extends Application {
-    
-    @Override
-    public void start(Stage primaryStage) {
-        
-        MenuBar menuBar = new MenuBar();
-        BackgroundFill menuBarBgFill = new BackgroundFill(Color.DARKGRAY, CornerRadii.EMPTY, Insets.EMPTY);
-        menuBar.setBackground(new Background(menuBarBgFill));
-        
-        
-        Menu menuFile = new Menu("Datei");
-        
-        
-        MenuItem newAuftrag = new MenuItem("Auftrag anlegen");
-        newAuftrag.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                AuftragController auftragController = new AuftragController();
-                try {
-                    auftragController.setIsNew(true);
-                    auftragController.start(primaryStage);
-                } catch (Exception ex) {
-                    Logger.getLogger(DemoProject.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        });
-        
-        MenuItem searchAuftrag = new MenuItem("Auftrag suchen");
-        searchAuftrag.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                AuftragController auftragController = new AuftragController();
-                try {
-                    auftragController.setIsNew(false);
-                    auftragController.start(primaryStage);
-                } catch (Exception ex) {
-                    Logger.getLogger(DemoProject.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        });
-        
-        MenuItem exit = new MenuItem("Schliessen");
-        exit.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                System.exit(0);
-            }
-        });
-        
-        
-        menuFile.getItems().addAll(newAuftrag, searchAuftrag, exit);
-        
-        Menu menuEdit = new Menu("Bearbeiten");
-        menuEdit.setDisable(true);
-        menuBar.getMenus().addAll(menuFile, menuEdit);
-        
-        StackPane root = new StackPane();
-        root.setAlignment(Pos.TOP_LEFT);
-        root.setMinWidth(800);
-        root.getChildren().addAll(menuBar);
-		root.getStylesheets().add("css/form.css");
-        root.getStyleClass().add("startPane");
-		
-        Scene scene = new Scene(root, 800, 600);
-        
-        primaryStage.setTitle("TP-Networks");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
 
-    /**
-     * @param args the command line arguments
-     * @throws java.lang.Exception
-     */
-    public static void main(String[] args) throws Exception {
-        DBConnect myDb = new DBConnect();
-        Connection conn = myDb.getConnection();
-        if (conn != null) {
-             launch(args);
-        }
-    }
+	@Override
+	public void start(Stage primaryStage) {
+
+		MenuBar menuBar = new MenuBar();
+		BackgroundFill menuBarBgFill = new BackgroundFill(Color.DARKGRAY, CornerRadii.EMPTY, Insets.EMPTY);
+		menuBar.setBackground(new Background(menuBarBgFill));
+
+		Menu menuFile = new Menu("Datei");
+
+		MenuItem newAuftrag = new MenuItem("Auftrag anlegen");
+		newAuftrag.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				AuftragController auftragController = new AuftragController();
+				try {
+					auftragController.setIsNew(true);
+					auftragController.start(primaryStage);
+				} catch (Exception ex) {
+					Logger.getLogger(DemoProject.class.getName()).log(Level.SEVERE, null, ex);
+				}
+			}
+		});
+
+		MenuItem searchAuftrag = new MenuItem("Auftrag suchen");
+		searchAuftrag.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				AuftragController auftragController = new AuftragController();
+				try {
+					auftragController.setIsNew(false);
+					auftragController.start(primaryStage);
+				} catch (Exception ex) {
+					Logger.getLogger(DemoProject.class.getName()).log(Level.SEVERE, null, ex);
+				}
+			}
+		});
+
+		MenuItem exit = new MenuItem("Schließen");
+		exit.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				System.exit(0);
+			}
+		});
+
+		menuFile.getItems().addAll(newAuftrag, searchAuftrag, exit);
+
+		Menu menuEdit = new Menu("Bearbeiten");
+		menuEdit.setDisable(true);
+		menuBar.getMenus().addAll(menuFile, menuEdit);
+
+		StackPane root = new StackPane();
+		root.setAlignment(Pos.TOP_LEFT);
+		root.setMinWidth(800);
+		root.getChildren().addAll(menuBar);
+		root.getStylesheets().add("css/form.css");
+		root.getStyleClass().add("startPane");
+
+		Scene scene = new Scene(root, 800, 600);
+
+		primaryStage.setTitle("TP-Networks");
+		primaryStage.setScene(scene);
+		primaryStage.show();
+	}
+
+	/**
+	 * @param args the command line arguments
+	 * @throws java.lang.Exception
+	 */
+	public static void main(String[] args) throws Exception {
+		DBConnect myDb = new DBConnect();
+		Connection conn = myDb.getConnection();
+		if (conn != null) {
+			launch(args);
+		}
+	}
 }
