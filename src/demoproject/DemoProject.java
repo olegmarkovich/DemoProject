@@ -5,7 +5,6 @@
  */
 package demoproject;
 
-import demoproject.Formular.Auftrag;
 import demoproject.Formular.AuftragController;
 import java.sql.Connection;
 import java.util.logging.Level;
@@ -98,7 +97,6 @@ public class DemoProject extends Application {
         primaryStage.setTitle("TP-Networks");
         primaryStage.setScene(scene);
         primaryStage.show();
-//        new Auftrag(primaryStage, true);
     }
 
     /**
