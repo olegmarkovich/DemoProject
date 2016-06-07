@@ -18,8 +18,9 @@ import javafx.stage.Stage;
  * @author Lenovo
  */
 public class MenuController extends Application {
+
 	private Stage stage = null;
-	
+
 	@Override
 	public void start(Stage stage) throws Exception {
 		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/menu.fxml"));
@@ -29,41 +30,40 @@ public class MenuController extends Application {
 		stage.show();
 		this.stage = stage;
 	}
-	
+
 	public Stage getStage() {
 		if (null == this.stage) {
 			this.stage = new Stage();
 		}
 		return this.stage;
 	}
-	
-	@FXML protected void openExistingAuftrag(ActionEvent event) throws Exception
-	{
+
+	@FXML
+	protected void openExistingAuftrag(ActionEvent event) throws Exception {
 		this.openAuftrag(false);
 	}
-	
-	@FXML protected void openNewAuftrag(ActionEvent event) throws Exception
-	{
+
+	@FXML
+	protected void openNewAuftrag(ActionEvent event) throws Exception {
 		this.openAuftrag(true);
 	}
-	
-	@FXML protected void closeApp(ActionEvent event) throws Exception
-	{
+
+	@FXML
+	protected void closeApp(ActionEvent event) throws Exception {
 		System.exit(0);
 	}
-        
-        @FXML protected void openNewKunde(ActionEvent event) throws Exception
-        {
-            this.openKunde(true);
-        }
-	
+
+	@FXML
+	protected void openNewKunde(ActionEvent event) throws Exception {
+		this.openKunde(true);
+	}
+
 	/**
 	 *
 	 * @param isNew
 	 * @throws java.lang.Exception
 	 */
-	private void openAuftrag(boolean isNew) throws Exception
-	{
+	private void openAuftrag(boolean isNew) throws Exception {
 		AuftragController aController = new AuftragController();
 		aController.setIsNew(isNew);
 		try {
@@ -73,14 +73,13 @@ public class MenuController extends Application {
 		}
 	}
 
-        private void openKunde(boolean isNew) throws Exception
-        {
-                KundenController kController = new KundenController();
-                kController.setIsNew(isNew);
-                try {
-                        kController.start(this.getStage());
-                } catch (Exception e) {
-                        new demoproject.Error(e.getMessage());
-                }
-        }
+	private void openKunde(boolean isNew) throws Exception {
+		KundenController kController = new KundenController();
+		kController.setIsNew(isNew);
+		try {
+			kController.start(this.getStage());
+		} catch (Exception e) {
+			new demoproject.Error(e.getMessage());
+		}
+	}
 }
