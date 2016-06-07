@@ -34,4 +34,8 @@ public class KundenController extends Application {
         //To change body of generated methods, choose Tools | Templates.
     }
     
+	public void setIsNew(boolean isNew)
+	{
+		this.isNew = isNew;
+	}
 }
