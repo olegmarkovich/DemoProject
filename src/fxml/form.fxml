@@ -31,7 +31,7 @@
 	<Button fx:id="searchButton" 
 			GridPane.columnIndex="2" 
 			GridPane.rowIndex="1"
-			text="Search" 
+			text="Suchen" 
 			onAction="#handleSubmitButtonAction"/>
 	<Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="2"
