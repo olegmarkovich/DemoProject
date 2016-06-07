@@ -40,7 +40,7 @@ public class DemoProject extends Application {
         menuBar.setBackground(new Background(menuBarBgFill));
         
         
-        Menu menuFile = new Menu("File");
+        Menu menuFile = new Menu("Datei");
         
         
         MenuItem newAuftrag = new MenuItem("Neu Auftrag");
@@ -71,7 +71,7 @@ public class DemoProject extends Application {
             }
         });
         
-        MenuItem exit = new MenuItem("Exit");
+        MenuItem exit = new MenuItem("Schliessen");
         exit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -82,7 +82,7 @@ public class DemoProject extends Application {
         
         menuFile.getItems().addAll(newAuftrag, searchAuftrag, exit);
         
-        Menu menuEdit = new Menu("Edit");
+        Menu menuEdit = new Menu("Bearbeiten");
         menuEdit.setDisable(true);
         menuBar.getMenus().addAll(menuFile, menuEdit);
         

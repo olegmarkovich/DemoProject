@@ -44,9 +44,9 @@
 			>
 		<items>
 			<FXCollections fx:factory="observableArrayList">
-				<String fx:value="Item 1" />
-				<String fx:value="Item 2" />
-				<String fx:value="Item 3" />
+				<String fx:value="Kunde 1" />
+				<String fx:value="Kunde 2" />
+				<String fx:value="Kunde 3" />
 			</FXCollections>
 		</items>
 	</ComboBox>
@@ -149,4 +149,21 @@
 			  editable="true" layoutX="300.0" layoutY="22.0"
 			  minWidth="300.0" 
 			/>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="14"
+		   text="Techniker"/>  
+	<ComboBox id="comboTech" fx:id="comboTech"
+			  GridPane.columnIndex="1" 
+			  GridPane.rowIndex="14"
+			  editable="false" layoutX="300.0" layoutY="22.0"
+			  minWidth="300.0" 
+			>
+		<items>
+			<FXCollections fx:factory="observableArrayList">
+				<String fx:value="Techniker 1" />
+				<String fx:value="Techniker 2" />
+				<String fx:value="Techniker 3" />
+			</FXCollections>
+		</items>
+	</ComboBox>
 </GridPane>
