@@ -9,26 +9,36 @@
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 
-<GridPane 
-    id="GridPane" 
-    prefHeight="600.0"
-    prefWidth="800.0"
-    xmlns:fx="http://javafx.com/fxml/1"
-    hgap="10"
-    vgap="10"
-    fx:controller="demoproject.Formular.AuftragController"
->
-    <stylesheets>
-        <URL value="@css/form.css"/>
-    </stylesheets>
-    
-    <TextField fx:id="searchAuftrag"
-               GridPane.columnIndex="0" 
-               GridPane.rowIndex="1" 
-               text="Auftragsnummer"/>
-    <Button fx:id="searchButton" 
-            GridPane.columnIndex="1" 
-            GridPane.rowIndex="1"
-            text="Search" 
-            onAction="#handleSubmitButtonAction"/>
-</GridPane>
+<StackPane 
+		xmlns:fx="http://javafx.com/fxml/1"  
+		fx:controller="demoproject.Formular.MenuController"
+		alignment="TOP_LEFT" 
+		id="startPane"
+		fx:id="startPane"
+	>
+	<stylesheets>
+		<URL value="@../css/form.css"/>
+	</stylesheets>
+	<children>
+		<MenuBar id="mainMenuBar">
+			<menus>
+				<Menu text="Datei">
+					<items>
+						<MenuItem id="newAuftrag" text="Auftrag anlegen"
+							onAction="#openNewAuftrag"
+						/>
+						<MenuItem id="existingAuftrag" text="Auftrag suchen"
+							onAction="#openExistingAuftrag"
+						/>
+						<MenuItem id="close" text="Schließen"
+							onAction="#closeApp"
+						/>
+					</items>
+				</Menu>
+				<Menu text="Bearbeiten" disable="true">
+					
+				</Menu>
+			</menus>
+		</MenuBar>
+	</children>
+</StackPane>

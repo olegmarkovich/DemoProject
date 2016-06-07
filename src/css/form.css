@@ -8,7 +8,7 @@
     -fx-background-position: right 5px top 5px;
 }
 
-.startPane {
+#startPane {
 	-fx-padding: 0em 0em 1em 0em;
 	-fx-background-color: #FFFFFF;
 	-fx-background-image: url("http://www.tpnetworks.de/templates/ptn/images/logo.jpg");
