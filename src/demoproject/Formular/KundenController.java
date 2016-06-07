@@ -26,16 +26,34 @@ public class KundenController extends Application {
 	 *
 	 * @param event
 	 */
+    @FXML
+    public void handleSubmitButtonAction(ActionEvent event) {
+		System.out.println("demoproject.Formular.KundenController.handleSubmitButtonAction()");
+	}
+    
     
     @Override
-    public void start(Stage primaryStage) throws Exception 
-    {
-        throw new UnsupportedOperationException("Not supported yet.");
-        //To change body of generated methods, choose Tools | Templates.
+    public void start(Stage stage) throws Exception {
+
+		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/form.fxml"));
+		root.getStyleClass().add("formPane");
+		root.getChildrenUnmodifiable().forEach((Node n) -> {
+			if (this.isNew && n instanceof Node && "searchButton".equals(n.getId())) {
+				n.setVisible(false);
+			}
+			System.out.println(n.getId());
+		});
+
+		Scene scene = new Scene(root, 800, 600);
+		stage.setScene(scene);
+		stage.show();
     }
+        /**
+	 *
+	 * @param isNew
+	 */
     
-	public void setIsNew(boolean isNew)
-	{
-		this.isNew = isNew;
+	public void setIsNew(boolean isNew) {
+            this.isNew = isNew;
 	}
 }
