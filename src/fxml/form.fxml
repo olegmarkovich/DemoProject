@@ -12,7 +12,7 @@
 <?import javafx.scene.paint.*?>
 
 <GridPane 
-	id="GridPane" 
+	id="GridPaneAuftragForm" 
 	prefHeight="600.0"
 	prefWidth="800.0"
 	xmlns:fx="http://javafx.com/fxml/1"
@@ -21,7 +21,7 @@
 	fx:controller="demoproject.Formular.AuftragController"
 >
 	<stylesheets>
-		<URL value="@css/form.css"/>
+		<URL value="@../css/form.css"/>
 	</stylesheets>
     
 	<TextField fx:id="searchAuftrag"

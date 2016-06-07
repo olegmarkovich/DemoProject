@@ -53,7 +53,6 @@ public class AbstractFormular implements Formular
        
         
         Scene scene = new Scene(grid, 800, 600);
-        scene.getStylesheets().add("css/form.css");
         s.setScene(scene);
         s.show();
     }
