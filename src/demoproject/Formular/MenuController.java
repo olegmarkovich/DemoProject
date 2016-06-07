@@ -51,6 +51,11 @@ public class MenuController extends Application {
 	{
 		System.exit(0);
 	}
+        
+        @FXML protected void openNewKunde(ActionEvent event) throws Exception
+        {
+            this.openKunde(true);
+        }
 	
 	/**
 	 *
@@ -67,4 +72,15 @@ public class MenuController extends Application {
 			new demoproject.Error(e.getMessage());
 		}
 	}
+
+        private void openKunde(boolean isNew) throws Exception
+        {
+                KundenController kController = new KundenController();
+                kController.setIsNew(isNew);
+                try {
+                        kController.start(this.getStage());
+                } catch (Exception e) {
+                        new demoproject.Error(e.getMessage());
+                }
+        }
 }

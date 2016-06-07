@@ -30,9 +30,13 @@
 						<MenuItem id="existingAuftrag" text="Auftrag suchen"
 							onAction="#openExistingAuftrag"
 						/>
-						<MenuItem id="close" text="Schließen"
-							onAction="#closeApp"
+                                                <MenuItem  id="newKunde" text="Kunden anlegen"
+                                                           onAction="#openNewKunde"
+                                                />
+                                                 <MenuItem id="close" text="Schließen"
+                                                           onAction="#closeApp"
 						/>
+                                                
 					</items>
 				</Menu>
 				<Menu text="Bearbeiten" disable="true">
