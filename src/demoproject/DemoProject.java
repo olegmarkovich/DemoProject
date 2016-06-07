@@ -42,7 +42,7 @@ public class DemoProject extends Application {
         Menu menuFile = new Menu("Datei");
         
         
-        MenuItem newAuftrag = new MenuItem("Neu Auftrag");
+        MenuItem newAuftrag = new MenuItem("Auftrag anlegen");
         newAuftrag.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -56,7 +56,7 @@ public class DemoProject extends Application {
             }
         });
         
-        MenuItem searchAuftrag = new MenuItem("Suchen Auftrag");
+        MenuItem searchAuftrag = new MenuItem("Auftrag suchen");
         searchAuftrag.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
