@@ -35,8 +35,8 @@
 			onAction="#handleSubmitButtonAction"/>
 	<Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="2"
-		   text="Kunden"/>  
-	<ComboBox id="comboKunden" fx:id="comboKunden"
+		   text="Kundenname"/>  
+	<ComboBox id="comboKundenname" fx:id="comboKundenname"
 			  GridPane.columnIndex="1" 
 			  GridPane.rowIndex="2"
 			  editable="false" layoutX="300.0" layoutY="22.0"
@@ -50,4 +50,103 @@
 			</FXCollections>
 		</items>
 	</ComboBox>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="3"
+		   text="Strasse"/>  
+	<TextField id="txtStrasse" fx:id="txtStrasse"
+			  GridPane.columnIndex="1" 
+			  GridPane.rowIndex="3"
+			  editable="true" layoutX="300.0" layoutY="22.0"
+			  minWidth="300.0" 
+			/>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="4"
+		   text="Hausnummer"/>  
+	<TextField id="txtHausnr" fx:id="txtHausnr"
+			  GridPane.columnIndex="1" 
+			  GridPane.rowIndex="4"
+			  editable="true" layoutX="300.0" layoutY="22.0"
+			  minWidth="300.0" 
+			/>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="5"
+		   text="PLZ"/>  
+	<TextField id="txtPLZ" fx:id="txtPLZ"
+			  GridPane.columnIndex="1" 
+			  GridPane.rowIndex="5"
+			  editable="true" layoutX="300.0" layoutY="22.0"
+			  minWidth="300.0" 
+			/>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="6"
+		   text="Stadt"/>  
+	<TextField id="txtStadt" fx:id="txtStadt"
+			  GridPane.columnIndex="1" 
+			  GridPane.rowIndex="6"
+			  editable="true" layoutX="300.0" layoutY="22.0"
+			  minWidth="300.0" 
+			/>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="7"
+		   text="Etage"/>  
+	<TextField id="txtEtage" fx:id="txtEtage"
+			  GridPane.columnIndex="1" 
+			  GridPane.rowIndex="7"
+			  editable="true" layoutX="300.0" layoutY="22.0"
+			  minWidth="300.0" 
+			/>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="8"
+		   text="Raum"/>  
+	<TextField id="txtRaum" fx:id="txtRaum"
+			  GridPane.columnIndex="1" 
+			  GridPane.rowIndex="8"
+			  editable="true" layoutX="300.0" layoutY="22.0"
+			  minWidth="300.0" 
+			/>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="9"
+		   text="Termin Anfang"/>  
+	<TextField id="txtTerminAnf" fx:id="txtTerminAnf"
+			  GridPane.columnIndex="1" 
+			  GridPane.rowIndex="9"
+			  editable="true" layoutX="300.0" layoutY="22.0"
+			  minWidth="300.0" 
+			/>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="10"
+		   text="Termin Ende"/>  
+	<TextField id="txtTerminEnd" fx:id="txtTerminEnd"
+			  GridPane.columnIndex="1" 
+			  GridPane.rowIndex="10"
+			  editable="true" layoutX="300.0" layoutY="22.0"
+			  minWidth="300.0" 
+			/>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="11"
+		   text="Aufgabe"/>  
+	<TextField id="txtAufgabe" fx:id="txtAufgabe"
+			  GridPane.columnIndex="1" 
+			  GridPane.rowIndex="11"
+			  editable="true" layoutX="300.0" layoutY="22.0"
+			  minWidth="300.0" 
+			/>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="12"
+		   text="Bemerkung"/>  
+	<TextField id="txtBemerkung" fx:id="txtBemerkung"
+			  GridPane.columnIndex="1" 
+			  GridPane.rowIndex="12"
+			  editable="true" layoutX="300.0" layoutY="22.0"
+			  minWidth="300.0" 
+			/>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="13"
+		   text="Plaene"/>  
+	<TextField id="txtPlan" fx:id="txtPlan"
+			  GridPane.columnIndex="1" 
+			  GridPane.rowIndex="13"
+			  editable="true" layoutX="300.0" layoutY="22.0"
+			  minWidth="300.0" 
+			/>
 </GridPane>
