@@ -1,10 +1,17 @@
 
-#GridPaneAuftragForm {
+.formPane {
 	-fx-margin: 5px;
 	-fx-padding: 1em;
 	-fx-background-color: #FFFFFF;
 	-fx-background-image: url("http://www.tpnetworks.de/templates/ptn/images/logo.jpg");
 	-fx-background-repeat: no-repeat;
-    -fx-background-position: right top;
+    -fx-background-position: right 5px top 5px;
 }
 
+.startPane {
+	-fx-padding: 0em 0em 1em 0em;
+	-fx-background-color: #FFFFFF;
+	-fx-background-image: url("http://www.tpnetworks.de/templates/ptn/images/logo.jpg");
+	-fx-background-repeat: no-repeat;
+    -fx-background-position: top 30px right 5px;
+}

@@ -37,13 +37,14 @@ public class AuftragController extends Application{
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/form.fxml"));
-        if (this.isNew) {
-            root.getChildrenUnmodifiable().forEach((Node n) -> {
-                if (n instanceof Node && "searchButton".equals(n.getId())) {
-                    n.setVisible(false);
-                }
-            });
-        }
+		root.getStyleClass().add("formPane");
+		root.getChildrenUnmodifiable().forEach((Node n) -> {
+			if (this.isNew && n instanceof Node && "searchButton".equals(n.getId())) {
+				n.setVisible(false);
+			}
+			System.out.println(n.getId());
+		});
+		
         Scene scene = new Scene(root, 800, 600);
         stage.setScene(scene);
         stage.show();

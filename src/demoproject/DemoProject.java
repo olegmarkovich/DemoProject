@@ -90,7 +90,9 @@ public class DemoProject extends Application {
         root.setAlignment(Pos.TOP_LEFT);
         root.setMinWidth(800);
         root.getChildren().addAll(menuBar);
-        
+		root.getStylesheets().add("css/form.css");
+        root.getStyleClass().add("startPane");
+		
         Scene scene = new Scene(root, 800, 600);
         
         primaryStage.setTitle("TP-Networks");
