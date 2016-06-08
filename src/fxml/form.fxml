@@ -14,7 +14,7 @@
 <GridPane 
 	id="GridPaneAuftragForm" 
 	prefHeight="600.0"
-	prefWidth="800.0"
+	prefWidth=" 800.0"
 	xmlns:fx="http://javafx.com/fxml/1"
 	hgap="10"
 	vgap="10"
@@ -23,6 +23,9 @@
 	<stylesheets>
 		<URL value="@../css/form.css"/>
 	</stylesheets>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="1"
+		   text="Auftragsnummer"/>  
     
 	<TextField fx:id="searchAuftrag"
 			   GridPane.columnIndex="1"
@@ -57,7 +60,8 @@
 			  GridPane.columnIndex="1" 
 			  GridPane.rowIndex="3"
 			  editable="true" layoutX="300.0" layoutY="22.0"
-			  minWidth="300.0" 
+			  minWidth="300.0"
+                          promptText="Strasse" 
 			/>
         <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="4"
@@ -67,6 +71,7 @@
 			  GridPane.rowIndex="4"
 			  editable="true" layoutX="300.0" layoutY="22.0"
 			  minWidth="300.0" 
+                          promptText="Hausnummer"
 			/>
         <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="5"
@@ -76,6 +81,7 @@
 			  GridPane.rowIndex="5"
 			  editable="true" layoutX="300.0" layoutY="22.0"
 			  minWidth="300.0" 
+                          promptText="PLZ"
 			/>
         <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="6"
@@ -85,16 +91,19 @@
 			  GridPane.rowIndex="6"
 			  editable="true" layoutX="300.0" layoutY="22.0"
 			  minWidth="300.0" 
+                          promptText="Stadt"
 			/>
         <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="7"
-		   text="Etage"/>  
+		   text="Etage"
+        />  
 	<TextField id="txtEtage" fx:id="txtEtage"
 			  GridPane.columnIndex="1" 
 			  GridPane.rowIndex="7"
 			  editable="true" layoutX="300.0" layoutY="22.0"
 			  minWidth="300.0" 
-			/>
+                          promptText="Etage"
+        />
         <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="8"
 		   text="Raum"/>  
@@ -103,7 +112,8 @@
 			  GridPane.rowIndex="8"
 			  editable="true" layoutX="300.0" layoutY="22.0"
 			  minWidth="300.0" 
-			/>
+                          promptText="Raum"
+        />
         <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="9"
 		   text="Termin Anfang"/>  
@@ -112,6 +122,7 @@
 			  GridPane.rowIndex="9"
 			  editable="true" layoutX="300.0" layoutY="22.0"
 			  minWidth="300.0" 
+                          promptText="Termin Anfang"
 			/>
         <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="10"
@@ -121,6 +132,7 @@
 			  GridPane.rowIndex="10"
 			  editable="true" layoutX="300.0" layoutY="22.0"
 			  minWidth="300.0" 
+                          promptText="Termin Ende"
 			/>
         <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="11"
@@ -130,6 +142,7 @@
 			  GridPane.rowIndex="11"
 			  editable="true" layoutX="300.0" layoutY="22.0"
 			  minWidth="300.0" 
+                          promptText="Aufgabe"
 			/>
         <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="12"
@@ -139,6 +152,7 @@
 			  GridPane.rowIndex="12"
 			  editable="true" layoutX="300.0" layoutY="22.0"
 			  minWidth="300.0" 
+                          promptText="Bemerkung"
 			/>
         <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="13"
@@ -148,6 +162,7 @@
 			  GridPane.rowIndex="13"
 			  editable="true" layoutX="300.0" layoutY="22.0"
 			  minWidth="300.0" 
+                          promptText="Pläne"
 			/>
         <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="14"

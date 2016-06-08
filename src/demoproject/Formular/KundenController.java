@@ -35,11 +35,11 @@ public class KundenController extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/form.fxml"));
+		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/kunde.fxml"));
 		root.getStyleClass().add("formPane");
 		root.getChildrenUnmodifiable().forEach((Node n) -> {
-			if (this.isNew && n instanceof Node && "searchButton".equals(n.getId())) {
-				n.setVisible(false);
+			if (this.isNew && n instanceof Node && "saveButton".equals(n.getId())) {
+				n.setVisible(true);
 			}
 			System.out.println(n.getId());
 		});

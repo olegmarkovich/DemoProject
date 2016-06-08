@@ -36,7 +36,6 @@
                                                  <MenuItem id="close" text="Schließen"
                                                            onAction="#closeApp"
 						/>
-                                                
 					</items>
 				</Menu>
 				<Menu text="Bearbeiten" disable="true">
