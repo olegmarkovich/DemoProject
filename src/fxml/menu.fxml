@@ -23,22 +23,36 @@
 		<MenuBar id="mainMenuBar">
 			<menus>
 				<Menu text="Datei">
-					<items>
-						<MenuItem id="newAuftrag" text="Auftrag anlegen"
+                                <Menu text="Auftrag">
+                                     <items>
+                                               
+                                                         
+                                                    <MenuItem id="newAuftrag" text="Auftrag anlegen"
 							onAction="#openNewAuftrag"
-						/>
-						<MenuItem id="existingAuftrag" text="Auftrag suchen"
+                                                        />
+                                                  <MenuItem id="existingAuftrag" text="Auftrag suchen"
 							onAction="#openExistingAuftrag"
-						/>
-                                                <MenuItem  id="newKunde" text="Kunden anlegen"
-                                                           onAction="#openNewKunde"
-                                                />
-                                                 <MenuItem id="close" text="Schließen"
+						         />
+                                     </items> 
+                                        </Menu>
+                                                <Menu text="Kunde">
+                                     <items>
+                                               
+                                                         
+                                                    <MenuItem id="newKunde" text="Kunden anlegen"
+							onAction="#openNewKunde"
+                                                        />
+                                                  <MenuItem id="existingAuftrag" text="Kunden suchen"
+							onAction="#openExistingKunde"
+						         />
+                                     </items> 
+                                        </Menu>
+                                         <MenuItem id="close" text="Schließen"
                                                            onAction="#closeApp"
-						/>
-					</items>
-				</Menu>
-				<Menu text="Bearbeiten" disable="true">
+								/>		
+                                       </Menu>   
+   
+                                    <Menu text="Bearbeiten" disable="true">
 					
 				</Menu>
 			</menus>

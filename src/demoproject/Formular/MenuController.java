@@ -57,6 +57,11 @@ public class MenuController extends Application {
 	protected void openNewKunde(ActionEvent event) throws Exception {
 		this.openKunde(true);
 	}
+        
+        @FXML
+	protected void openExistingKunde(ActionEvent event) throws Exception {
+		this.openKunde(false);
+	}
 
 	/**
 	 *
