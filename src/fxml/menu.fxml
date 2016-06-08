@@ -14,6 +14,8 @@
 	fx:controller="demoproject.Formular.MenuController"
 	alignment="TOP_LEFT" 
 	id="startPane"
+	prefWidth="800.0"
+	prefHeight="600.0"
 	fx:id="startPane">
 	<stylesheets>
 		<URL value="@../css/form.css"/>

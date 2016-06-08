@@ -44,7 +44,7 @@ public class KundenController extends Application {
 			System.out.println(n.getId());
 		});
 
-		Scene scene = new Scene(root, 800, 600);
+		Scene scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
     }

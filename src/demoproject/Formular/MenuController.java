@@ -25,7 +25,7 @@ public class MenuController extends Application {
 	public void start(Stage stage) throws Exception {
 		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/menu.fxml"));
 		root.getStyleClass().add("menuPane");
-		Scene scene = new Scene(root, 800, 600);
+		Scene scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
 		this.stage = stage;

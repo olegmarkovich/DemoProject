@@ -33,12 +33,10 @@ public class DBConnect {
             Connection conn = DriverManager.getConnection(url, DBConnect.USR_NAME, DBConnect.PWD);
             DBConnect.conn = conn;
         } catch (SQLException e) {
-            System.err.println(e.getMessage());
-            new Error("Database not found");
+            new demoproject.Error("Database not found");
             isValid = false;
         } catch (ClassNotFoundException e) {
-            System.err.println(e.getMessage());
-            new Error("DB Driver not found");
+            new demoproject.Error("DB Driver not found");
             isValid = false;
         } finally {
             return isValid;
@@ -53,9 +51,7 @@ public class DBConnect {
      */
     public Connection getConnection() throws SQLException, ClassNotFoundException
     {
-        if (DBConnect.conn == null) {
-            this.connect();
-        }
+        this.connect();
         return DBConnect.conn;
     }
     

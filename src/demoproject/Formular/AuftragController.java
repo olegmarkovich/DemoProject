@@ -5,15 +5,20 @@
  */
 package demoproject.Formular;
 
+import demoproject.finder.Auftrag;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 /**
@@ -23,6 +28,8 @@ import javafx.stage.Stage;
 public class AuftragController extends Application {
 
 	private boolean isNew;
+	
+	@FXML private TextField searchAuftrag;
 
 	@Override
 	public void start(Stage stage) throws Exception {
@@ -48,28 +55,51 @@ public class AuftragController extends Application {
 	}
 	
 	/**
-	 * 
+	 * action bei maus click
 	 * @param event 
 	 */
 	@FXML
-	protected void searchAuftragMouseClick(ActionEvent event)
+	protected void searchAuftragMouseClick(MouseEvent event) throws SQLException, ClassNotFoundException
 	{
-//		System.out.println(event.getEventType().toString());
+		this.findAuftraege(this.searchAuftrag.getCharacters().toString());
 	}
 	
 	/**
-	 * 
+	 * action bei taste los lässt
 	 * @param event 
 	 */
 	@FXML
-	protected void searchAuftragKeyReleased(ActionEvent event)
+	protected void searchAuftragKeyReleased(KeyEvent event) throws SQLException, ClassNotFoundException
 	{
-//		System.out.println(event.getEventType().toString());
+		if (event.getCode() == KeyCode.ENTER) {
+			this.findAuftraege(this.searchAuftrag.getCharacters().toString());
+		}
+	}
+	
+	/**
+	 * finde aufträge
+	 * @param searchValue
+	 * @throws SQLException
+	 * @throws ClassNotFoundException 
+	 */
+	private void findAuftraege(String searchValue) throws SQLException, ClassNotFoundException 
+	{
+		this.searchAuftrag.setDisable(true);
+		try {
+			ArrayList res = new ArrayList();
+			demoproject.finder.Auftrag aFinder = new Auftrag();
+			res = aFinder.findAutraege(searchValue);
+		} catch (Exception e) {
+			new demoproject.Error(e.getMessage());
+			System.out.println(e.getMessage() + " " + e.getClass().toString());
+		} finally {
+			this.searchAuftrag.setDisable(false);
+		}
 	}
 	
 
 	/**
-	 *
+	 * setze ob es um den neuen Autrag handelt, oder ein neuen gemacht wird
 	 * @param isNew
 	 */
 	public void setIsNew(boolean isNew) {

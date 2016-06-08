@@ -14,8 +14,8 @@
 
 <GridPane 
 	id="GridPaneKundenForm" 
-	prefHeight="600.0"
-	prefWidth=" 800.0"
+	prefWidth="1024.0"
+	prefHeight="900.0"
 	xmlns:fx="http://javafx.com/fxml/1"
 	hgap="10"
 	vgap="10"
