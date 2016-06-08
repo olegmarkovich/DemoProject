@@ -19,81 +19,72 @@
 	xmlns:fx="http://javafx.com/fxml/1"
 	hgap="10"
 	vgap="10"
-	fx:controller="demoproject.Formular.KundenController"
->
+	fx:controller="demoproject.Formular.KundenController">
 	<stylesheets>
 		<URL value="@../css/form.css"/>
 	</stylesheets>
         
-        <Button fx:id="saveButton" 
+	<Button fx:id="saveButton" 
 			GridPane.columnIndex="1" 
 			GridPane.rowIndex="13"
 			text="Speichern" 
 			onAction="#handleSubmitButtonAction"/>
-
-        <Label GridPane.columnIndex="0"
+	<Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="1"
 		   text="Kundenname"
-        /> 
+		   styleClass="formLabel"/> 
 	<TextField fx:id="newKunde"
 			   GridPane.columnIndex="1"
 			   GridPane.rowIndex="1" 
-                           editable="true" 
-                           layoutX="300.0" layoutY="22.0" minWidth="300.0"
-                           promptText="Firmen/Kundenname"
-        />
-        <Label GridPane.columnIndex="0"
+			   editable="true" 
+			   layoutX="300.0" layoutY="22.0" minWidth="300.0"
+			   promptText="Firmen/Kundenname"/>
+	<Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="2"
 		   text="Strasse"
-        />  
-        <TextField id="txtStrasse" fx:id="txtStrasse"
-			  GridPane.columnIndex="1" 
-			  GridPane.rowIndex="2"
-                          promptText="Strasse"
-	/>
-        <Label GridPane.columnIndex="0"
+		   styleClass="formLabel"/>  
+	<TextField id="txtStrasse" fx:id="txtStrasse"
+			   GridPane.columnIndex="1" 
+			   GridPane.rowIndex="2"
+			   promptText="Strasse"/>
+	<Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="3"
 		   text="Hausnummer"
-        /> 		  
-        <TextField fx:id="txtHausnummer"
+		   styleClass="formLabel"/> 		  
+	<TextField fx:id="txtHausnummer"
 			   GridPane.columnIndex="1"
 			   GridPane.rowIndex="3" 
-			   promptText="Hausnummer"
-        />
-         <Label GridPane.columnIndex="0"
+			   promptText="Hausnummer"/>
+	<Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="4"
 		   text="PLZ"
-        /> 		  
-        <TextField fx:id="txtPLZ"
+		   styleClass="formLabel"/> 		  
+	<TextField fx:id="txtPLZ"
 			   GridPane.columnIndex="1"
 			   GridPane.rowIndex="4" 
-			   promptText="PLZ"
-        />
-        <Label GridPane.columnIndex="0"
+			   promptText="PLZ"/>
+	<Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="5"
 		   text="Ort"
-        /> 		  
-        <TextField fx:id="txtOrt"
+		   styleClass="formLabel"/> 		  
+	<TextField fx:id="txtOrt"
 			   GridPane.columnIndex="1"
 			   GridPane.rowIndex="5" 
-			   promptText="Ort"
-        />
-        <Label GridPane.columnIndex="0"
+			   promptText="Ort"/>
+	<Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="6"
 		   text="Telefonnummer"
-        /> 		  
-        <TextField fx:id="txtTel"
+		   styleClass="formLabel"/> 		  
+	<TextField fx:id="txtTel"
 			   GridPane.columnIndex="1"
 			   GridPane.rowIndex="6" 
-			   promptText="Telefonnummer"
-        />
-         <Label GridPane.columnIndex="0"
+			   promptText="Telefonnummer"/>
+	<Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="7"
 		   text="E-Mail"
-        /> 		  
-        <TextField fx:id="txtMail"
+		   styleClass="formLabel"/> 		  
+	<TextField fx:id="txtMail"
 			   GridPane.columnIndex="1"
 			   GridPane.rowIndex="7" 
-			   promptText="E-Mail"
-        />
+			   promptText="E-Mail"/>
 </GridPane>

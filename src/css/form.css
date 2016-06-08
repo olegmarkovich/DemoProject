@@ -15,3 +15,22 @@
 	-fx-background-repeat: no-repeat;
     -fx-background-position: top 30px right 5px;
 }
+
+#searchAuftrag {
+	-fx-background-image: url("../images/search.jpg");
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: right center;
+	-fx-font-size: 20;
+	-fx-background-size: 34px;
+}
+
+.formLabel {
+	-fx-hpos: center;
+	-fx-vpos: right;
+}
+
+.searchLabel {
+	-fx-hpos: center;
+	-fx-vpos: left;
+	-fx-font-size: 2em;
+}

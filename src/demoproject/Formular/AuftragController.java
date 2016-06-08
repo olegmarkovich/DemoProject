@@ -5,6 +5,8 @@
  */
 package demoproject.Formular;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,30 +24,49 @@ public class AuftragController extends Application {
 
 	private boolean isNew;
 
-	/**
-	 *
-	 * @param event
-	 */
-	@FXML
-	public void handleSubmitButtonAction(ActionEvent event) {
-		System.out.println("demoproject.Formular.AuftragController.handleSubmitButtonAction()");
-	}
-
 	@Override
 	public void start(Stage stage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/form.fxml"));
+		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/auftrag.fxml"));
 		root.getStyleClass().add("formPane");
+		ArrayList showOnStartNotNewAufgrag = new ArrayList<String>(Arrays.asList("searchAuftragLabel", "searchAuftrag"));
+		ArrayList hideOnStartNewAufgrag = new ArrayList<String>(Arrays.asList("searchAuftragLabel", "searchAuftrag"));
+		
 		root.getChildrenUnmodifiable().forEach((Node n) -> {
-			if (this.isNew && n instanceof Node && "searchButton".equals(n.getId())) {
+			if (
+				n instanceof Node && (
+					(! this.isNew && ! showOnStartNotNewAufgrag.contains(n.getId()))
+					|| (this.isNew && hideOnStartNewAufgrag.contains(n.getId()))
+				)
+			) {
 				n.setVisible(false);
 			}
-			System.out.println(n.getId());
 		});
 
 		Scene scene = new Scene(root, 800, 600);
 		stage.setScene(scene);
 		stage.show();
-	}   
+	}
+	
+	/**
+	 * 
+	 * @param event 
+	 */
+	@FXML
+	protected void searchAuftragMouseClick(ActionEvent event)
+	{
+//		System.out.println(event.getEventType().toString());
+	}
+	
+	/**
+	 * 
+	 * @param event 
+	 */
+	@FXML
+	protected void searchAuftragKeyReleased(ActionEvent event)
+	{
+//		System.out.println(event.getEventType().toString());
+	}
+	
 
 	/**
 	 *
