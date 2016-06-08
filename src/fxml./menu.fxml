@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?> 
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+<StackPane 
+	xmlns:fx="http://javafx.com/fxml/1"  
+	fx:controller="demoproject.Formular.MenuController"
+	alignment="TOP_LEFT" 
+	id="startPane"
+	fx:id="startPane">
+	<stylesheets>
+		<URL value="@../css/form.css"/>
+	</stylesheets>
+	<children>
+		<MenuBar id="mainMenuBar">
+			<menus>
+				<Menu text="Datei">
+					<Menu text="Auftrag">
+						<items>                          
+							<MenuItem 
+								id="newAuftrag"
+								text="Auftrag anlegen"
+								onAction="#openNewAuftrag"/>
+							<MenuItem 
+								id="existingAuftrag" 
+								text="Auftrag suchen"
+								onAction="#openExistingAuftrag"/>
+						</items> 
+					</Menu>
+					<Menu text="Kunde">
+						<items>
+							<MenuItem 
+								id="newKunde" 
+								text="Kunden anlegen"
+								onAction="#openNewKunde"/>
+							<MenuItem 
+								id="existingAuftrag" 
+								text="Kunden suchen"
+								onAction="#openExistingKunde"/>
+						</items>
+					</Menu>
+					<MenuItem 
+						id="close" 
+						text="Schließen"
+						onAction="#closeApp"/>		
+				</Menu>
+				<Menu text="Bearbeiten" disable="true">
+					
+				</Menu>
+			</menus>
+		</MenuBar>
+	</children>
+</StackPane>
