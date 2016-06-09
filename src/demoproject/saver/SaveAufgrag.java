@@ -48,6 +48,9 @@ public class SaveAufgrag extends DBConnect {
 					+ "(?,?,CURRENT_TIMESTAMP, ?)");
 
 			stmt.setString(1, data.get(0));
+			if (data.get(0) == null) {
+				throw new Exception("Bitte geben Sie Auftragsnummer");
+			}
 			stmt.setInt(2, addressId);
 			stmt.setString(3, data.get(5));
 			stmt.execute();
