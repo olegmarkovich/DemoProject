@@ -27,10 +27,17 @@
 .formLabel {
 	-fx-hpos: center;
 	-fx-vpos: right;
+	-fx-label-padding: 0 20 0 20;
 }
 
 .searchLabel {
 	-fx-hpos: center;
 	-fx-vpos: left;
 	-fx-font-size: 2em;
+}
+
+.formLabelRequired {
+	-fx-hpos: center;
+	-fx-vpos: right;
+	-fx-label-padding: 0 20 0 20;
 }
