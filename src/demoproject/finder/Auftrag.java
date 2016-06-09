@@ -25,15 +25,23 @@ public class Auftrag extends DBConnect {
 	 */
 	public ArrayList findAutraege(String searchVal) throws SQLException, ClassNotFoundException {
 		Connection conn = this.getConnection();
-		PreparedStatement stmt = conn.prepareStatement("SELECT * FROM tbl_auftrag WHERE UPPER(number) LIKE UPPER(?)");
+		PreparedStatement stmt = conn.prepareStatement("SELECT "
+				+ " j.job_number, a.street_1, a.home_number, a.zip_code, a.city, j.note "
+				+ " FROM tbl_job AS j "
+				+ " LEFT JOIN tbl_address AS a ON j.job_address_id = a.id "
+				+ " WHERE UPPER(j.job_number) LIKE UPPER(?)");
 
 		stmt.setString(1, '%' + searchVal + '%');
 		ResultSet rs;
 		rs = stmt.executeQuery();
 		ArrayList<String> list = new ArrayList();
 		while (rs.next()) {
-			String number = rs.getString("number");
-			list.add(number);
+			list.add(0, rs.getString("job_number"));
+			list.add(1, rs.getString("street_1"));
+			list.add(2, rs.getString("home_number"));
+			list.add(3, rs.getString("zip_code"));
+			list.add(4, rs.getString("city"));
+			list.add(5, rs.getString("note"));
 		}
 		
 		conn.close();

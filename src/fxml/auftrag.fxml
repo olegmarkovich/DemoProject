@@ -19,14 +19,17 @@
 	hgap="10"
 	vgap="10"
 	fx:controller="demoproject.Formular.AuftragController">
+	
 	<stylesheets>
 		<URL value="@../css/form.css"/>
 	</stylesheets>
+	
 	<Label 
 		GridPane.columnIndex="0"
 		GridPane.rowIndex="1"
 		text="Suchen"
 		id="searchAuftragLabel"
+		fx:id="searchAuftragLabel"
 		styleClass="searchLabel"/>
 	<TextField 
 		fx:id="searchAuftrag"
@@ -213,13 +216,15 @@
 		text="Termin Anfang"
 		id="TerAnLabel"
 		styleClass="formLabel"/>
-	<TextField 
+	<DatePicker 
 		id="txtTerminAnf" 
 		fx:id="txtTerminAnf"
-		GridPane.columnIndex="3" 
+		GridPane.columnIndex="3"
 		GridPane.rowIndex="6"
-		editable="true" layoutX="300.0" layoutY="22.0"
-		minWidth="300.0" 
+		editable="true"
+		layoutX="300.0"
+		layoutY="22.0"
+		minWidth="300.0"
 		promptText="Termin Anfang"/>
 	
 	<Label 
@@ -228,7 +233,7 @@
 		text="Termin Ende"
 		id="TerEnLabel"
 		styleClass="formLabel"/>
-	<TextField 
+	<DatePicker 
 		id="txtTerminEnd" 
 		fx:id="txtTerminEnd"
 		GridPane.columnIndex="1" 
@@ -333,4 +338,11 @@
 			</FXCollections>
 		</items>
 	</ComboBox>
+	<Button 
+		id="saveAuftrag"
+		fx:id="saveAuftrag"
+		GridPane.columnIndex="3" 
+		GridPane.rowIndex="10" 
+		text="Speichern"
+		onMouseClicked="#saveAuftrag"/>  
 </GridPane>

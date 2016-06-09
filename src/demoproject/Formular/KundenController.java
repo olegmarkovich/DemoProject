@@ -53,7 +53,6 @@ public class KundenController extends Application {
 			if (this.isNew && n instanceof Node && "saveButton".equals(n.getId())) {
 				n.setVisible(true);
 			}
-			System.out.println(n.getId());
 		});
 
 		Scene scene = new Scene(root);
