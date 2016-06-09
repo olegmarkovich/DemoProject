@@ -49,7 +49,7 @@ public class SaveAufgrag extends DBConnect {
 
 			stmt.setString(1, data.get(0));
 			stmt.setInt(2, addressId);
-			stmt.setString(1, data.get(5));
+			stmt.setString(3, data.get(5));
 			stmt.execute();
 			conn.commit();
 			isSaved = true;
