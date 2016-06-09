@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -21,6 +22,17 @@ import javafx.stage.Stage;
 public class KundenController extends Application {
                 
     private boolean isNew;
+    
+    @FXML private TextField newKunde;
+    @FXML private TextField txtName;
+    @FXML private TextField txtVorname;
+    @FXML private TextField txtStrasse;
+    @FXML private TextField txtHausnummer;
+    @FXML private TextField txtPLZ;
+    @FXML private TextField txtStadt;
+    @FXML private TextField txtOrt;
+    @FXML private TextField txtTel;
+    @FXML private TextField txtMail;
     
     /**
 	 *

@@ -164,8 +164,8 @@
 		text="Gebäude"
 		id="newAuftragLabel"
 		styleClass="formLabel"/>
-	<TextField fx:id="newGebaeude"
-		id="newGebäude"
+	<TextField fx:id="txtGebaeude"
+		id="txtGebäude"
 		GridPane.columnIndex="1"
 		GridPane.rowIndex="9" 
 		promptText="Gebäude"/>
