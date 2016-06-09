@@ -54,6 +54,7 @@
 		GridPane.columnIndex="2"
 		GridPane.rowIndex="1"
 		text="Kundenname"
+                id="KdNameLabel"
 		styleClass="formLabel"/>
 	<ComboBox 
 		id="comboKundenname" 
@@ -100,6 +101,7 @@
 		GridPane.columnIndex="0"
 		GridPane.rowIndex="3"
 		text="Strasse"
+                id="StrLabel"
 		styleClass="formLabelRequired"/>
 	<TextField 
 		id="txtStrasse" 
@@ -116,6 +118,7 @@
 		GridPane.columnIndex="2"
 		GridPane.rowIndex="3"
 		text="Hausnummer"
+                id="HausLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtHausnr" 
@@ -132,6 +135,7 @@
 		GridPane.columnIndex="0"
 		GridPane.rowIndex="4"
 		text="PLZ"
+                id="PLZLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtPLZ" 
@@ -146,6 +150,7 @@
 		GridPane.columnIndex="2"
 		GridPane.rowIndex="4"
 		text="Stadt"
+                id="StadtLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtStadt" 
@@ -174,6 +179,7 @@
 		GridPane.columnIndex="2"
 		GridPane.rowIndex="5"
 		text="Etage"
+                id="EtageLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtEtage" 
@@ -190,6 +196,7 @@
 		GridPane.columnIndex="0"
 		GridPane.rowIndex="6"
 		text="Raum"
+                id="RaumLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtRaum" 
@@ -204,6 +211,7 @@
 		GridPane.columnIndex="2"
 		GridPane.rowIndex="6"
 		text="Termin Anfang"
+                id="TerAnLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtTerminAnf" 
@@ -218,6 +226,7 @@
 		GridPane.columnIndex="0"
 		GridPane.rowIndex="7"
 		text="Termin Ende"
+                id="TerEnLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtTerminEnd" 
@@ -234,6 +243,7 @@
 		GridPane.columnIndex="2"
 		GridPane.rowIndex="7"
 		text="Aufgabe"
+                id="AufgabeLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtAufgabe" 
@@ -250,6 +260,7 @@
 		GridPane.columnIndex="0"
 		GridPane.rowIndex="8"
 		text="Bemerkung"
+                id="BemLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtBemerkung" 
@@ -266,6 +277,7 @@
 		GridPane.columnIndex="2"
 		GridPane.rowIndex="8"
 		text="Pläne"
+                id="PlanLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtPlan" 
@@ -282,6 +294,7 @@
 		GridPane.columnIndex="0"
 		GridPane.rowIndex="9"
 		text="Techniker"
+                id="TechLabel"
 		styleClass="formLabel"/>  
 	<ComboBox id="comboTech" fx:id="comboTech"
 		GridPane.columnIndex="1" 
@@ -301,6 +314,7 @@
 		GridPane.columnIndex="2"
 		GridPane.rowIndex="9"
 		text="Abrechnungsart"
+                id="AbrLabel"
 		styleClass="formLabel"/>  
 	<ComboBox id="comboAbr" fx:id="comboAbr"
 		GridPane.columnIndex="3" 

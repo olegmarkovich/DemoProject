@@ -24,7 +24,7 @@
 		<URL value="@../css/form.css"/>
 	</stylesheets>
         
-	<Button fx:id="saveButton" 
+	<Button fx:id="saveButton"
 			GridPane.columnIndex="1" 
 			GridPane.rowIndex="13"
 			text="Speichern" 
@@ -32,8 +32,9 @@
 	<Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="1"
 		   text="Kundenname"
+                   id="newKundeLabel"
 		   styleClass="formLabel"/> 
-	<TextField fx:id="newKunde"
+	<TextField fx:id="newKunde" id="newKunde" 
                          GridPane.columnIndex="1"
                          GridPane.rowIndex="1" 
                          editable="true" 
@@ -42,6 +43,7 @@
         <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="2"
 		   text="Name"
+                   id="NameLabel"
 		   styleClass="formLabel"/>
 	<TextField id="txtName" fx:id="txtName"
 			   GridPane.columnIndex="1" 
@@ -50,6 +52,7 @@
         <Label GridPane.columnIndex="2"
 		   GridPane.rowIndex="2"
 		   text="Vorname"
+                   id="VornameLabel"
 		   styleClass="formLabel"/>   
         <TextField id="txtVorname" fx:id="txtVorname"
 			   GridPane.columnIndex="3" 
@@ -58,6 +61,7 @@
         <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="3"
 		   text="Strasse"
+                   id="StrLable"
 		   styleClass="formLabel"/>   
 	<TextField id="txtStrasse" fx:id="txtStrasse"
 			   GridPane.columnIndex="1" 
@@ -66,6 +70,7 @@
         <Label GridPane.columnIndex="2"
 		   GridPane.rowIndex="3"
 		   text="Hausnummer"
+                   id="HausLabel"
 		   styleClass="formLabel"/>  
 	<TextField id="txtHausnummer" fx:id="txtHausnummer"
 			   GridPane.columnIndex="3" 
@@ -74,6 +79,7 @@
 	<Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="4"
 		   text="PLZ"
+                   id="PLZLabel"
 		   styleClass="formLabel"/> 		  
 	<TextField fx:id="txtPLZ" id="txtPLZ"
 			   GridPane.columnIndex="1"
@@ -82,6 +88,7 @@
 	<Label GridPane.columnIndex="2"
 		   GridPane.rowIndex="4"
 		   text="Stadt"
+                   id="StadtLabel"
 		   styleClass="formLabel"/> 		  
 	<TextField fx:id="txtStadt" id="txtStadt"
 			   GridPane.columnIndex="3"
@@ -90,6 +97,7 @@
 	<Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="5"
 		   text="Telefonnummer1"
+                   id="TelLabel"
 		   styleClass="formLabel"/> 		  
 	<TextField fx:id="txtTel" id="txtTel"
 			   GridPane.columnIndex="1"
@@ -98,6 +106,7 @@
 	<Label GridPane.columnIndex="2"
 		   GridPane.rowIndex="5"
 		   text="Telefonnummer 1"
+                   id="TelTooLabel"
 		   styleClass="formLabel"/> 		  
 	<TextField fx:id="txtTelToo" id="txtTelToo"
 			   GridPane.columnIndex="3"
@@ -106,6 +115,7 @@
 	<Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="6"
 		   text="E-Mail 1"
+                   id="MailLabel"
 		   styleClass="formLabel"/> 		  
 	<TextField fx:id="txtMail" id="txtMail"
 			   GridPane.columnIndex="1"
@@ -114,6 +124,7 @@
         <Label GridPane.columnIndex="2"
 		   GridPane.rowIndex="6"
 		   text="E-Mail 2"
+                   id="MailTooLabel"
 		   styleClass="formLabel"/> 		  
 	<TextField fx:id="txtMailToo" id="txtMailToo"
 			   GridPane.columnIndex="3"
