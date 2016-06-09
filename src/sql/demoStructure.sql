@@ -47,7 +47,7 @@ CREATE TABLE tbl_customer(
 	id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY PRIMARY KEY
 	, customer_name LONG VARCHAR
 	, default_address_id INTEGER
-	, CONSTRAINT address_id_fkey FOREIGN KEY(default_address_id) REFERENCES address(id)
+	, CONSTRAINT address_id_fkey FOREIGN KEY(default_address_id) REFERENCES tbl_address(id)
 );
 
 CREATE TABLE tbl_customer_address(
