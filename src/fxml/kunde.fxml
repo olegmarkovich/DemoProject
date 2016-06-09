@@ -34,57 +34,81 @@
 		   text="Kundenname"
 		   styleClass="formLabel"/> 
 	<TextField fx:id="newKunde"
-			   GridPane.columnIndex="1"
-			   GridPane.rowIndex="1" 
-			   editable="true" 
-			   layoutX="300.0" layoutY="22.0" minWidth="300.0"
-			   promptText="Firmen/Kundenname"/>
-	<Label GridPane.columnIndex="0"
+                         GridPane.columnIndex="1"
+                         GridPane.rowIndex="1" 
+                         editable="true" 
+                         layoutX="300.0" layoutY="22.0" minWidth="300.0"
+                         promptText="Firmen/Kundenname"/>
+        <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="2"
-		   text="Strasse"
-		   styleClass="formLabel"/>  
-	<TextField id="txtStrasse" fx:id="txtStrasse"
+		   text="Name"
+		   styleClass="formLabel"/>
+	<TextField id="txtName" fx:id="txtName"
 			   GridPane.columnIndex="1" 
 			   GridPane.rowIndex="2"
-			   promptText="Strasse"/>
-	<Label GridPane.columnIndex="0"
+			   promptText="Name"/>
+        <Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="3"
+		   text="Vorname"
+		   styleClass="formLabel"/>   
+        <TextField id="txtVorname" fx:id="txtVorname"
+			   GridPane.columnIndex="1" 
+			   GridPane.rowIndex="3"
+			   promptText="Vorname"/>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="4"
+		   text="Strasse"
+		   styleClass="formLabel"/>   
+	<TextField id="txtStrasse" fx:id="txtStrasse"
+			   GridPane.columnIndex="1" 
+			   GridPane.rowIndex="4"
+			   promptText="Strasse"/>
+        <Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="5"
 		   text="Hausnummer"
-		   styleClass="formLabel"/> 		  
-	<TextField fx:id="txtHausnummer"
-			   GridPane.columnIndex="1"
-			   GridPane.rowIndex="3" 
+		   styleClass="formLabel"/>  
+	<TextField id="txtHausnummer" fx:id="txtHausnummer"
+			   GridPane.columnIndex="1" 
+			   GridPane.rowIndex="5"
 			   promptText="Hausnummer"/>
 	<Label GridPane.columnIndex="0"
-		   GridPane.rowIndex="4"
+		   GridPane.rowIndex="6"
 		   text="PLZ"
 		   styleClass="formLabel"/> 		  
-	<TextField fx:id="txtPLZ"
-			   GridPane.columnIndex="1"
-			   GridPane.rowIndex="4" 
-			   promptText="PLZ"/>
-	<Label GridPane.columnIndex="0"
-		   GridPane.rowIndex="5"
-		   text="Ort"
-		   styleClass="formLabel"/> 		  
-	<TextField fx:id="txtOrt"
-			   GridPane.columnIndex="1"
-			   GridPane.rowIndex="5" 
-			   promptText="Ort"/>
-	<Label GridPane.columnIndex="0"
-		   GridPane.rowIndex="6"
-		   text="Telefonnummer"
-		   styleClass="formLabel"/> 		  
-	<TextField fx:id="txtTel"
+	<TextField fx:id="txtPLZ" id="txtPLZ"
 			   GridPane.columnIndex="1"
 			   GridPane.rowIndex="6" 
-			   promptText="Telefonnummer"/>
+			   promptText="PLZ"/>
 	<Label GridPane.columnIndex="0"
 		   GridPane.rowIndex="7"
-		   text="E-Mail"
+		   text="tadt"
 		   styleClass="formLabel"/> 		  
-	<TextField fx:id="txtMail"
+	<TextField fx:id="txtStadt" id="txtStadt"
 			   GridPane.columnIndex="1"
 			   GridPane.rowIndex="7" 
+			   promptText="Stadt"/>
+	<Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="8"
+		   text="Ort"
+		   styleClass="formLabel"/> 		  
+	<TextField fx:id="txtOrt" id="txtOrt"
+			   GridPane.columnIndex="1"
+			   GridPane.rowIndex="8" 
+			   promptText="Ort"/>
+	<Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="9"
+		   text="Telefonnummer"
+		   styleClass="formLabel"/> 		  
+	<TextField fx:id="txtTel" id="txtTel"
+			   GridPane.columnIndex="1"
+			   GridPane.rowIndex="9" 
+			   promptText="Telefonnummer"/>
+	<Label GridPane.columnIndex="0"
+		   GridPane.rowIndex="10"
+		   text="E-Mail"
+		   styleClass="formLabel"/> 		  
+	<TextField fx:id="txtMail" id="txtMail"
+			   GridPane.columnIndex="1"
+			   GridPane.rowIndex="10" 
 			   promptText="E-Mail"/>
 </GridPane>

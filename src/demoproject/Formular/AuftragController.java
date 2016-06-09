@@ -15,6 +15,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -30,7 +31,25 @@ public class AuftragController extends Application {
 	private boolean isNew;
 	
 	@FXML private TextField searchAuftrag;
-
+        @FXML private TextField newAuftrag;
+        @FXML private ComboBox comboKundenname;
+        @FXML private TextField newEingang;
+        @FXML private TextField newArt;
+        @FXML private TextField txtStrasse;
+        @FXML private TextField txtHausnr;
+        @FXML private TextField txtPLZ;
+        @FXML private TextField txtStadt;
+        @FXML private TextField txtGebaeude;
+        @FXML private TextField txtEtage;
+        @FXML private TextField txtRaum;    
+        @FXML private TextField txtTerminAnf;
+        @FXML private TextField txtTerminEnd;
+        @FXML private TextField txtAufgabe;
+        @FXML private TextField txtBemerkung;
+        @FXML private TextField txtPlan;
+        @FXML private ComboBox comboTech;
+        @FXML private ComboBox comboAbr;
+               
 	@Override
 	public void start(Stage stage) throws Exception {
 		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("fxml/auftrag.fxml"));
