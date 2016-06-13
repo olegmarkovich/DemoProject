@@ -170,10 +170,10 @@
 		GridPane.columnIndex="0"
 		GridPane.rowIndex="5"
 		text="Gebäude"
-		id="newAuftragLabel"
+		id="GebaeudeLabel"
 		styleClass="formLabel"/>
 	<TextField fx:id="txtGebaeude"
-			   id="txtGebäude"
+			   id="txtGebaeude"
 			   GridPane.columnIndex="1"
 			   GridPane.rowIndex="5" 
 			   promptText="Gebäude"/>
