@@ -136,6 +136,7 @@ public class AuftragController extends Application {
 			
 		} catch (Exception e) {
 			new demoproject.Error(e.getMessage());
+			System.out.println(e.getMessage());
 		} finally {
 			this.searchAuftrag.setDisable(false);
 		}
