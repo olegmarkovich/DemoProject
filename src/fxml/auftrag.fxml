@@ -13,20 +13,23 @@
 
 <GridPane 
 	id="GridPaneAuftragForm" 
-	prefHeight="800.0"
-	prefWidth=" 900.0"
+	prefHeight="500.0"
+	prefWidth=" 1200.0"
 	xmlns:fx="http://javafx.com/fxml/1"
 	hgap="10"
 	vgap="10"
 	fx:controller="demoproject.Formular.AuftragController">
+	
 	<stylesheets>
 		<URL value="@../css/form.css"/>
 	</stylesheets>
+	
 	<Label 
 		GridPane.columnIndex="0"
 		GridPane.rowIndex="1"
 		text="Suchen"
 		id="searchAuftragLabel"
+		fx:id="searchAuftragLabel"
 		styleClass="searchLabel"/>
 	<TextField 
 		fx:id="searchAuftrag"
@@ -51,15 +54,16 @@
 		promptText="Auftragsnummer"/>
 	
 	<Label 
-		GridPane.columnIndex="0"
-		GridPane.rowIndex="2"
+		GridPane.columnIndex="2"
+		GridPane.rowIndex="1"
 		text="Kundenname"
+		id="KdNameLabel"
 		styleClass="formLabel"/>
 	<ComboBox 
 		id="comboKundenname" 
 		fx:id="comboKundenname"
-		GridPane.columnIndex="1" 
-		GridPane.rowIndex="2"
+		GridPane.columnIndex="3" 
+		GridPane.rowIndex="1"
 		editable="false" layoutX="300.0" layoutY="22.0"
 		minWidth="300.0">
 		<items>
@@ -73,7 +77,7 @@
 	
 	<Label 
 		GridPane.columnIndex="0"
-		GridPane.rowIndex="3"
+		GridPane.rowIndex="2"
 		text="Auftrag"
 		id="newAuftragLabel"
 		styleClass="formLabel"/>
@@ -81,31 +85,32 @@
 		fx:id="newEingang"
 		id="newEingang"
 		GridPane.columnIndex="1"
-		GridPane.rowIndex="3" 
+		GridPane.rowIndex="2" 
 		promptText="per Mail/Telefon/Fax"/>
 	
 	<Label 
-		GridPane.columnIndex="0"
-		GridPane.rowIndex="4"
+		GridPane.columnIndex="2"
+		GridPane.rowIndex="2"
 		text="Auftragsart"
 		id="newAuftragLabel"
 		styleClass="formLabel"/>
 	<TextField fx:id="newArt"
-		id="newArt"
-		GridPane.columnIndex="1"
-		GridPane.rowIndex="4" 
-		promptText="Auftragsart"/>
+			   id="newArt"
+			   GridPane.columnIndex="3"
+			   GridPane.rowIndex="2" 
+			   promptText="Auftragsart"/>
 	
 	<Label 
 		GridPane.columnIndex="0"
-		GridPane.rowIndex="5"
+		GridPane.rowIndex="3"
 		text="Strasse"
+		id="StrLabel"
 		styleClass="formLabelRequired"/>
 	<TextField 
 		id="txtStrasse" 
 		fx:id="txtStrasse"
 		GridPane.columnIndex="1" 
-		GridPane.rowIndex="5"
+		GridPane.rowIndex="3"
 		editable="true" 
 		layoutX="300.0" 
 		layoutY="22.0"
@@ -113,15 +118,16 @@
 		promptText="Strasse"/>
 	
 	<Label 
-		GridPane.columnIndex="0"
-		GridPane.rowIndex="6"
+		GridPane.columnIndex="2"
+		GridPane.rowIndex="3"
 		text="Hausnummer"
+		id="HausLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtHausnr" 
 		fx:id="txtHausnr"
-		GridPane.columnIndex="1" 
-		GridPane.rowIndex="6"
+		GridPane.columnIndex="3" 
+		GridPane.rowIndex="3"
 		editable="true" 
 		layoutX="300.0" 
 		layoutY="22.0"
@@ -130,28 +136,30 @@
 	
 	<Label 
 		GridPane.columnIndex="0"
-		GridPane.rowIndex="7"
+		GridPane.rowIndex="4"
 		text="PLZ"
+		id="PLZLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtPLZ" 
 		fx:id="txtPLZ"
 		GridPane.columnIndex="1" 
-		GridPane.rowIndex="7"
+		GridPane.rowIndex="4"
 		editable="true" layoutX="300.0" layoutY="22.0"
 		minWidth="300.0" 
 		promptText="PLZ"/>
 	
 	<Label 
-		GridPane.columnIndex="0"
-		GridPane.rowIndex="8"
+		GridPane.columnIndex="2"
+		GridPane.rowIndex="4"
 		text="Stadt"
+		id="StadtLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtStadt" 
 		fx:id="txtStadt"
-		GridPane.columnIndex="1" 
-		GridPane.rowIndex="8"
+		GridPane.columnIndex="3" 
+		GridPane.rowIndex="4"
 		editable="true" 
 		layoutX="300.0" 
 		layoutY="22.0"
@@ -160,26 +168,27 @@
 	
 	<Label 
 		GridPane.columnIndex="0"
-		GridPane.rowIndex="9"
+		GridPane.rowIndex="5"
 		text="Gebäude"
-		id="newAuftragLabel"
+		id="GebaeudeLabel"
 		styleClass="formLabel"/>
 	<TextField fx:id="txtGebaeude"
-		id="txtGebäude"
-		GridPane.columnIndex="1"
-		GridPane.rowIndex="9" 
-		promptText="Gebäude"/>
+			   id="txtGebaeude"
+			   GridPane.columnIndex="1"
+			   GridPane.rowIndex="5" 
+			   promptText="Gebäude"/>
 	
 	<Label 
-		GridPane.columnIndex="0"
-		GridPane.rowIndex="10"
+		GridPane.columnIndex="2"
+		GridPane.rowIndex="5"
 		text="Etage"
+		id="EtageLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtEtage" 
 		fx:id="txtEtage"
-		GridPane.columnIndex="1" 
-		GridPane.rowIndex="10"
+		GridPane.columnIndex="3" 
+		GridPane.rowIndex="5"
 		editable="true" 
 		layoutX="300.0" 
 		layoutY="22.0"
@@ -188,42 +197,47 @@
 	
 	<Label 
 		GridPane.columnIndex="0"
-		GridPane.rowIndex="11"
+		GridPane.rowIndex="6"
 		text="Raum"
+		id="RaumLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtRaum" 
 		fx:id="txtRaum"
 		GridPane.columnIndex="1" 
-		GridPane.rowIndex="11"
+		GridPane.rowIndex="6"
 		editable="true" layoutX="300.0" layoutY="22.0"
 		minWidth="300.0" 
 		promptText="Raum"/>
 	
 	<Label 
-		GridPane.columnIndex="0"
-		GridPane.rowIndex="12"
+		GridPane.columnIndex="2"
+		GridPane.rowIndex="6"
 		text="Termin Anfang"
+		id="TerAnLabel"
 		styleClass="formLabel"/>
-	<TextField 
+	<DatePicker 
 		id="txtTerminAnf" 
 		fx:id="txtTerminAnf"
-		GridPane.columnIndex="1" 
-		GridPane.rowIndex="12"
-		editable="true" layoutX="300.0" layoutY="22.0"
-		minWidth="300.0" 
+		GridPane.columnIndex="3"
+		GridPane.rowIndex="6"
+		editable="true"
+		layoutX="300.0"
+		layoutY="22.0"
+		minWidth="300.0"
 		promptText="Termin Anfang"/>
 	
 	<Label 
 		GridPane.columnIndex="0"
-		GridPane.rowIndex="13"
+		GridPane.rowIndex="7"
 		text="Termin Ende"
+		id="TerEnLabel"
 		styleClass="formLabel"/>
-	<TextField 
+	<DatePicker 
 		id="txtTerminEnd" 
 		fx:id="txtTerminEnd"
 		GridPane.columnIndex="1" 
-		GridPane.rowIndex="13"
+		GridPane.rowIndex="7"
 		editable="true" 
 		layoutX="300.0" 
 		layoutY="22.0"
@@ -231,15 +245,16 @@
 		promptText="Termin Ende"/>
 	
 	<Label 
-		GridPane.columnIndex="0"
-		GridPane.rowIndex="14"
+		GridPane.columnIndex="2"
+		GridPane.rowIndex="7"
 		text="Aufgabe"
+		id="AufgabeLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtAufgabe" 
 		fx:id="txtAufgabe"
-		GridPane.columnIndex="1" 
-		GridPane.rowIndex="14"
+		GridPane.columnIndex="3" 
+		GridPane.rowIndex="7"
 		editable="true" 
 		layoutX="300.0" 
 		layoutY="22.0"
@@ -248,14 +263,15 @@
 	
 	<Label 
 		GridPane.columnIndex="0"
-		GridPane.rowIndex="15"
+		GridPane.rowIndex="8"
 		text="Bemerkung"
+		id="BemLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtBemerkung" 
 		fx:id="txtBemerkung"
 		GridPane.columnIndex="1" 
-		GridPane.rowIndex="15"
+		GridPane.rowIndex="8"
 		editable="true" 
 		layoutX="300.0" 
 		layoutY="22.0"
@@ -263,15 +279,16 @@
 		promptText="Bemerkung"/>
 	
 	<Label 
-		GridPane.columnIndex="0"
-		GridPane.rowIndex="16"
+		GridPane.columnIndex="2"
+		GridPane.rowIndex="8"
 		text="Pläne"
+		id="PlanLabel"
 		styleClass="formLabel"/>
 	<TextField 
 		id="txtPlan" 
 		fx:id="txtPlan"
-		GridPane.columnIndex="1" 
-		GridPane.rowIndex="16"
+		GridPane.columnIndex="3" 
+		GridPane.rowIndex="8"
 		editable="true" 
 		layoutX="300.0" 
 		layoutY="22.0"
@@ -280,12 +297,15 @@
 	
 	<Label 
 		GridPane.columnIndex="0"
-		GridPane.rowIndex="17"
+		GridPane.rowIndex="9"
 		text="Techniker"
+		id="TechLabel"
 		styleClass="formLabel"/>  
-	<ComboBox id="comboTech" fx:id="comboTech"
+	<ComboBox 
+		id="comboTech" 
+		fx:id="comboTech"
 		GridPane.columnIndex="1" 
-		GridPane.rowIndex="17"
+		GridPane.rowIndex="9"
 		editable="false" layoutX="300.0" layoutY="22.0"
 		minWidth="300.0">
 		<items>
@@ -298,17 +318,18 @@
 	</ComboBox>
 	
 	<Label 
-		GridPane.columnIndex="0"
-		GridPane.rowIndex="18"
+		GridPane.columnIndex="2"
+		GridPane.rowIndex="9"
 		text="Abrechnungsart"
+		id="AbrLabel"
 		styleClass="formLabel"/>  
 	<ComboBox id="comboAbr" fx:id="comboAbr"
-		GridPane.columnIndex="1" 
-		GridPane.rowIndex="18"
-		editable="false" 
-		layoutX="300.0" 
-		layoutY="22.0"
-		minWidth="300.0">
+			  GridPane.columnIndex="3" 
+			  GridPane.rowIndex="9"
+			  editable="false" 
+			  layoutX="300.0" 
+			  layoutY="22.0"
+			  minWidth="300.0">
 		<items>
 			<FXCollections fx:factory="observableArrayList">
 				<String fx:value="Abrechnungsart 1" />
@@ -317,4 +338,11 @@
 			</FXCollections>
 		</items>
 	</ComboBox>
+	<Button 
+		id="saveAuftrag"
+		fx:id="saveAuftrag"
+		GridPane.columnIndex="3" 
+		GridPane.rowIndex="10" 
+		text="Speichern"
+		onMouseClicked="#saveAuftrag"/>  
 </GridPane>
