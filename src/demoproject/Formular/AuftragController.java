@@ -10,6 +10,7 @@ import demoproject.saver.SaveAufgrag;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Vector;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -118,15 +119,18 @@ public class AuftragController extends Application {
 	private void findAuftraege(String searchValue) throws SQLException, ClassNotFoundException {
 		this.searchAuftrag.setDisable(true);
 		try {
-			ArrayList<String> res = new ArrayList();
+			Vector<Domain.Core.Auftrag> res = new Vector();
 			demoproject.finder.Auftrag aFinder = new Auftrag();
 			res = aFinder.findAutraege(searchValue);
-			this.newAuftrag.setText(res.get(0));
-			this.txtStrasse.setText(res.get(1));
-			this.txtHausnr.setText(res.get(2));
-			this.txtPLZ.setText(res.get(3));
-			this.txtStadt.setText(res.get(4));
-			this.txtBemerkung.setText(res.get(5));
+			res.forEach((Domain.Core.Auftrag auftrag) -> {
+				this.newAuftrag.setText(auftrag.jobNumber);
+				this.txtStrasse.setText(auftrag.getJobAddress().street1);
+				this.txtHausnr.setText(auftrag.getJobAddress().homeNumber);
+				this.txtPLZ.setText(auftrag.getJobAddress().zipCode);
+				this.txtStadt.setText(auftrag.getJobAddress().city);
+				this.txtBemerkung.setText(auftrag.note);
+			});
+			
 			
 			Parent root = (Parent) this.newAuftrag.getScene().getRoot();
 			this.toggleVisibility(root, true);
