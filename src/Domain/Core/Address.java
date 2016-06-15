@@ -5,14 +5,18 @@
  */
 package Domain.Core;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityManager;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.Persistence;
 import javax.persistence.Table;
+import org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl;
 
 /**
  *
@@ -22,6 +26,27 @@ import javax.persistence.Table;
 @Table(name="TBL_ADDRESS")
 
 public class Address {
+	
+	private static final String PERSISTENCE_UNIT_NAME = "Address";
+	private static EntityManagerFactoryImpl factory;
+
+	public Address(String iso2code) {
+		factory = (EntityManagerFactoryImpl) Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+		EntityManager em = factory.createEntityManager();
+		Country country = em.getReference(Country.class, iso2code);
+		this.setCountry(country);
+	}
+	
+	public Address() {
+		factory = (EntityManagerFactoryImpl) Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+		EntityManager em = factory.createEntityManager();
+		Country gerCountry = em.getReference(Country.class, "DE");
+		this.setCountry(gerCountry);
+	}
+	
+	public Address(Country country) {
+		this.setCountry(country);
+	}
 
 	/**
 	 *
@@ -45,7 +70,7 @@ public class Address {
 	@Column(name="CITY")
 	public String city;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.DETACH)
 	@JoinColumn(name = "COUNTRY_ISO2CODE", nullable = false)
 	Country country;
 	

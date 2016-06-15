@@ -6,7 +6,6 @@
 package demoproject.finder;
 
 import demoproject.DBConnect;
-import static java.util.Collections.list;
 import java.util.Vector;
 
 import javax.persistence.EntityManager;

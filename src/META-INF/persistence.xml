@@ -12,4 +12,15 @@
 			<property name="javax.persistence.jdbc.password" value="shelluser"/>
 		</properties>
 	</persistence-unit>
+	<persistence-unit name="Address" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>Domain.Core.Address</class>
+		<class>Domain.Core.Country</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/MyDB"/>
+			<property name="javax.persistence.jdbc.user" value="shelluser"/>
+			<property name="javax.persistence.jdbc.password" value="shelluser"/>
+		</properties>
+	</persistence-unit>
 </persistence>

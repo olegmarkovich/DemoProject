@@ -156,15 +156,16 @@ public class AuftragController extends Application {
 	private boolean saveAuftrag(MouseEvent event) throws SQLException, ClassNotFoundException {
 		boolean hasSave = false;
 		try {
-			demoproject.saver.SaveAufgrag aSaver = new SaveAufgrag();
-			ArrayList<String> params = new ArrayList();
-			params.add(0, this.newAuftrag.getCharacters().toString());
-			params.add(1, this.txtStrasse.getCharacters().toString());
-			params.add(2, this.txtHausnr.getCharacters().toString());
-			params.add(3, this.txtPLZ.getCharacters().toString());
-			params.add(4, this.txtStadt.getCharacters().toString());
-			params.add(5, this.txtBemerkung.getCharacters().toString());
-			hasSave = aSaver.save(params);
+			Domain.Core.Auftrag auftrag = new Domain.Core.Auftrag();
+			Domain.Core.Address aAddress = new Domain.Core.Address();
+			auftrag.jobNumber = this.newAuftrag.getCharacters().toString();
+			aAddress.street1 = this.txtStrasse.getCharacters().toString();
+			aAddress.homeNumber = this.txtHausnr.getCharacters().toString();
+			aAddress.zipCode = this.txtPLZ.getCharacters().toString();
+			aAddress.city = this.txtStadt.getCharacters().toString();
+			auftrag.note = this.txtBemerkung.getCharacters().toString();
+			auftrag.setJobAddress(aAddress);
+			hasSave = auftrag.save();
 			if (hasSave) {
 				Stage stage = (Stage) this.newAuftrag.getScene().getWindow();
 				stage.close();
@@ -172,9 +173,9 @@ public class AuftragController extends Application {
 			}
 		} catch (Exception e) {
 			new demoproject.Error(e.getMessage());
+		} finally {		
+			return hasSave;
 		}
-		
-		return hasSave;
 	}
 
 	/**

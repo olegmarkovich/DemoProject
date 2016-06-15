@@ -5,14 +5,19 @@
  */
 package Domain.Core;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityManager;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.Persistence;
 import javax.persistence.Table;
+import org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl;
 
 /**
  *
@@ -22,7 +27,9 @@ import javax.persistence.Table;
 @Table(name="TBL_JOB")
 
 public class Auftrag {
-
+	
+	private static final String PERSISTENCE_UNIT_NAME = "Auftrag";
+	private static EntityManagerFactoryImpl factory;
 	/**
 	 *
 	 */
@@ -34,7 +41,7 @@ public class Auftrag {
 	public String jobNumber;
 //	int jobCustomerAddress;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "JOB_ADDRESS_ID", nullable = true)
 	Address jobAddress;
 //	String jobStartDate;
@@ -68,5 +75,26 @@ public class Auftrag {
 	public Address getJobAddress()
 	{
 		return this.jobAddress;
+	}
+	
+	public boolean save()
+	{
+		boolean result = false;
+		factory = (EntityManagerFactoryImpl) Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+		EntityManager em = factory.createEntityManager();
+		try {
+			em.getTransaction().begin();
+			em.persist(this);
+			em.flush();
+			result = true;
+			em.getTransaction().commit();
+		} catch (Exception e) {
+			em.getTransaction().rollback();
+			new demoproject.Error(e.getMessage());
+			result = false;
+			throw new Exception(e.getMessage());
+		} finally {
+			return result;
+		}
 	}
 }
